@@ -70,7 +70,7 @@ public class funcoes {
 
         }
     }
-
+    //conferir pois nao esta rodando
     static void ordenaPorNumero(Hotel hotel[]) {
         int i, j, posMenor;
         for (i = 0; i < hotel.length; i++) {
@@ -85,7 +85,7 @@ public class funcoes {
             hotel[posMenor] = temp;
         }
     }
-
+    //conferir pois nao esta rodando
     static void ordenaPorNome(Hotel hotel[]) {
         for (int i = 0; i < hotel.length; i++) {
             for (int j = 1; j < hotel.length - i; j++) {
