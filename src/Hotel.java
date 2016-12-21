@@ -20,13 +20,13 @@ class Hotel {
         int i;
         boolean x = true;
         for (i = 0; i < numero.length(); i++) {
-            if (numero.charAt(i) < 0 && numero.charAt(i) > 9) {
+            if (numero.charAt(i) < '0' || numero.charAt(i) > '9') {
                 x = false;
             }
         }
         return x;
     }
-
+    
     boolean verificarNome() {
         boolean y = true;
         if (nome.length() > 20) {
@@ -39,7 +39,7 @@ class Hotel {
         int i;
         boolean x = true;
         for (i = 0; i < numerodequartos.length(); i++) {
-            if (numerodequartos.charAt(i) < 0 && numerodequartos.charAt(i) > 9) {
+            if (numerodequartos.charAt(i) < '0' || numerodequartos.charAt(i) > '9') {
                 x = false;
             }
         }
@@ -69,6 +69,10 @@ class Hotel {
 
     String imprimir() {
         return "\nNúmero: 00" + numero + "\nNome: " + nome + "\nNº Quartos:" + numerodequartos + "\nNº de Telefone: " + formatarTelefone() + "\nTarifa: R$" + tarifaporquarto + "\nFaturamento Máximo: R$" + faturamentoMaximo() + ".00\n";
+    }
+    
+    String imprimirParaArquivo() {
+        return "\nNúmero: 00" + numero + "\nNome: " + nome + "\nNº Quartos:" + numerodequartos + "\nNº de Telefone: " + formatarTelefone() + "\nTarifa: R$" + tarifaporquarto + "\n";
     }
 
 }
